@@ -1,0 +1,43 @@
+<div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <!-- Író Column -->
+      <ng-container matColumnDef="iro">
+        <th mat-header-cell *matHeaderCellDef style="font-size: 15px;"> Író </th>
+        <td mat-cell *matCellDef="let element"> {{element.iro}} </td>
+      </ng-container>
+    
+      <!-- Műfaj Column -->
+      <ng-container matColumnDef="mufaj">
+        <th mat-header-cell *matHeaderCellDef style="font-size: 15px;"> Műfaj </th>
+        <td mat-cell *matCellDef="let element"> {{element.mufaj}} </td>
+      </ng-container>
+    
+      <!-- Cím Column -->
+      <ng-container matColumnDef="cim">
+        <th mat-header-cell *matHeaderCellDef style="font-size: 15px;">Cím</th>
+        <td mat-cell *matCellDef="let element">{{ element.cim }}</td>
+      </ng-container>
+  
+      <!-- Mentés Column -->
+      <ng-container matColumnDef="mentes">
+        <th mat-header-cell *matHeaderCellDef style="font-size: 15px;"> Mentés </th>
+        <td mat-cell *matCellDef="let element"> {{element.mentes}} </td>
+      </ng-container>
+         
+      <!-- Törlés Column -->
+      <ng-container matColumnDef="torles">
+        <th mat-header-cell *matHeaderCellDef style="font-size: 15px;"> Törlés </th>
+        <td mat-cell *matCellDef="let element"> {{element.torles}} </td>
+      </ng-container>
+  
+      <!-- Header row -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <!-- Data row -->
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+ 
+
+    <button mat-button color="primary" (click)="onButtonClick()">Kolcsonzesek</button> 
+  </div>
+  

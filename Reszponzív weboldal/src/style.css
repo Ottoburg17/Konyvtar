@@ -1,0 +1,60 @@
+
+.container {
+    position: relative;
+    padding: 0px;
+    height: 100vh; 
+    align-items: center;
+    justify-content: center;
+}
+
+.library-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10rem;
+    color: rgb(255, 255, 255);
+    background-color: rgba(161, 211, 54, 0.8);
+    padding: 20px;
+}
+
+.book-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; 
+}
+
+.frame-container {
+    border: 10px solid #a1d336;
+    border-radius: 3rem;
+    width: 50vw;
+    padding: 10px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.book-placeholder {
+    position: absolute;
+    bottom: 20px;
+    border-radius: 3rem; 
+    border: 5px solid #a1d336; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.book {
+    width: 40%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    margin-right: 40px;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+.book:hover {
+    transform: scale(0.9);
+}
